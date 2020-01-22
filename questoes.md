@@ -38,6 +38,7 @@ R$ 2.785.815.367,00 (representa 0,1% do total de dívidas PJ)
 
 
 6. Ranking de políticos com maior dívida  
+  
 | Nome                                    | Partido | Dívida total    |     Cargo
 | ------------------------------          |:-------:| ---------------:|:-------------:|
 | GENIVAL BRITO DE CARVALHO               | PT      | R$ 724.949.556  | VEREADOR      |
@@ -51,11 +52,15 @@ R$ 2.785.815.367,00 (representa 0,1% do total de dívidas PJ)
 | GUILHERME ANTONIO MALUF                 | PSDB    | R$  63.530.382  | DEP. ESTADUAL |
 | AIRTON GARCIA FERREIRA                  | PSB     | R$  50.419.856  | PREFEITO      |
 
+
 7. Valor médio e mediano da dívida (por empresa)  
 - Média geral: R\$ 945.420 / Mediana geral: R\$ 18.540
 - Média políticos:  R\$ 998.270 / Mediana políticos: R\$ 25.993
 
-8. Idade média da dívida
+
+8. Idade média da dívida  
+
+
 
 
 9. Políticos que devem há mais tempo

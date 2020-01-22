@@ -5,25 +5,44 @@ library(RPostgreSQL)
 
 
 politicos_total <- readRDS("data/politicos_total.rds")
+politicos_socios_red <- readRDS("data/politicos_socios_red.rds")
 devedores_pj <- readRDS("data/devedores_pj.rds")
 cruzamento_pj <- readRDS("data/cruzamento_pj.rds")
 
 
-devedores_pj <- devedores_pj %>% mutate(cnpj = str_replace_all(cpf_cnpj, "[\\./-]", ""))
 
-# Valor devido por empresas
-devedores_pj_agregado <- devedores_pj %>% group_by(cnpj) %>% summarise(valor_agregado = sum(valor_consolidado))
+# Visão cnpj (empresas)
+devedores_pj_agregado <- devedores_pj %>% group_by(cpf_cnpj) %>% summarise(valor_agregado = sum(valor_consolidado))
 
 # Empresas de políticos
 devedores_pj_agregado <- devedores_pj_agregado %>%
-  mutate(socio_politico = ifelse(cnpj %in% politicos_socios_red$cnpj_str, TRUE, FALSE))
+  mutate(socio_politico = ifelse(cpf_cnpj %in% politicos_socios_red$cnpj_str, TRUE, FALSE))
+
+# Total de políticos: 64938
+politicos_total$cpf_candidato %>% n_distinct()
+
+# Total de políticos que possuem empresas: 14405
+politicos_socios_red$cpf_candidato %>% n_distinct()
 
 # Total de empresas de políticos: 2885
-devedores_pj_agregado %>% filter(socio_politico == TRUE) %>% nrow()
+cruzamento_pj$cnpj_str %>% n_distinct()
+# ou: devedores_pj_agregado %>% filter(socio_politico == TRUE) %>% nrow()
+
+# Total de políticos sócios de empresas na dívida ativa
+cruzamento_pj$cpf_candidato %>% n_distinct()
+
+# Políticos com mais de uma empresa inscrita na dívida ativa
+cruzamento_pj %>%
+  group_by(cpf_candidato, nome_candidato, sigla_partido, descricao_cargo) %>%
+  summarise(n_empresas = n_distinct(cnpj_str)) %>%
+  filter(n_empresas > 1) %>%
+  arrange(desc(n_empresas))
+
 
 # Valor total devido por empresas de políticos: R$ 2.785.815.367
 devedores_pj_agregado %>% filter(socio_politico == TRUE) %>%
-  summarise(sum(valor_agregado))
+  summarise(total = sum(valor_agregado)) %>%
+  mutate(pct_da_divida_pj = total/sum(devedores_pj$valor_consolidado))
 
 
 # Políticos devedores (valor total e último cargo)
@@ -36,7 +55,7 @@ cruzamento_pj %>% arrange(ano_eleicao) %>%
   arrange(desc(valor)) %>% head(10) %>% View()
 
 # Empresas devedoras com maior número de políticos
-cruzamento_pj %>% group_by(cnpj, razao_social, ) %>%
+cruzamento_pj %>% group_by(cnpj2, razao_social, ) %>%
   summarise(n_politicos = n_distinct(cpf_candidato)) %>%
   arrange(desc(n_politicos)) %>% head(10)
 
@@ -56,7 +75,20 @@ cruzamento_pj %>% group_by(sigla_partido_novo, cnpj_str) %>%
   arrange(desc(pct_politicos))
 
 
+# Medidas resumo ----------------------------------------
+# Geral (por empresa)
+mean(devedores_pj_agregado$valor_agregado)
+median(devedores_pj_agregado$valor_agregado)
 
+# Empresas de políticos
+cruzamento_pj %>%
+  group_by(cnpj_str) %>%
+  summarise(valor_agregado = sum(valor_consolidado)) %>%
+  pull(valor_agregado) %>% mean()
+cruzamento_pj %>%
+  group_by(cnpj_str) %>%
+  summarise(valor_agregado = sum(valor_consolidado)) %>%
+  pull(valor_agregado) %>% median()
 
 # políticos endividados duplamente ----------------------------------------
 

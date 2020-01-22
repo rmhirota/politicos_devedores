@@ -28,16 +28,21 @@ db <- dbConnect(PostgreSQL(),
 
 # lista as tabelas do banco de dados
 dbListTables(db)
+dbGetQuery(db, "select * from politicos_total limit 10") %>% glimpse()
 
 politicos_socios <- (dbGetQuery(db,
                                 "select *
                      from politicos_total left join socios
                      on politicos_total.subset_cpf = socios.cnpj_cpf_do_socio and
                         politicos_total.nome_candidato = socios.nome_socio
-                     left join empresas on socios.cnpj = empresas.cnpj
-                     "))
-names(politicos_socios)[44] <- "cnpj2"
-politicos_socios <- politicos_socios %>% filter(!is.na(cnpj2))
+                     left join empresas on socios.cnpj = empresas.cnpj"))
+
+
+# Base politicos_socios extraída do postgres
+# politicos_socios <- data.table::fread("data/data-1579618845082.csv", colClasses = c(cpf_candidato = "character"))
+# glimpse(politicos_socios)
+
+politicos_socios <- politicos_socios %>% filter(cnpj != "NULL")
 
 politicos_socios_red <- politicos_socios %>%
   select(ano_eleicao, num_turno, descricao_eleicao, sigla_uf, sigla_ue,
@@ -48,11 +53,15 @@ politicos_socios_red <- politicos_socios %>%
          desc_sit_tot_turno, cnpj, data_entrada_sociedade, razao_social, nome_fantasia,
          data_inicio_atividade, qualificacao_do_responsavel, cnae_fiscal)
 
+
 politicos_socios_red <- politicos_socios_red %>%
-  mutate(cnpj_str = str_pad(as.character(cnpj), 14, "left", "0"))
+  mutate(cnpj_str = str_pad(cnpj, 14, "left", "0"))
 
 
-cruzamento_pj <- politicos_socios_red %>% left_join(devedores_pj, by = c("cnpj_str"="cnpj"))
+devedores_pj <- devedores_pj %>%
+  mutate(cpf_cnpj = str_remove_all(cpf_cnpj, "[\\./-]"))
+
+cruzamento_pj <- politicos_socios_red %>% left_join(devedores_pj, by = c("cnpj_str"="cpf_cnpj"))
 cruzamento_pj <- cruzamento_pj %>% filter(!is.na(valor_consolidado))
 # Atualiza partidos
 cruzamento_pj <- cruzamento_pj %>% mutate(sigla_partido_novo = ifelse(
@@ -63,3 +72,4 @@ cruzamento_pj <- cruzamento_pj %>% mutate(sigla_partido_novo = ifelse(
           sigla_partido == "PSDC", "DC", sigla_partido))))))
 
 cruzamento_pj %>% saveRDS("data/cruzamento_pj.rds")
+politicos_socios_red %>% saveRDS("data/politicos_socios_red.rds")

@@ -22,6 +22,8 @@ devedores_pf %>% saveRDS("data/devedores_pf.rds")
 
 # Filtra devedores que são pessoa jurídica
 devedores_pj <- base %>% filter(tipo_pessoa == "Pessoa jurídica")
+devedores_pj <- devedores_pj %>%
+  mutate(cpf_cnpj = str_remove_all(cpf_cnpj, "[\\./-]"))
 
 devedores_pj %>% saveRDS("data/devedores_pj.rds")
 

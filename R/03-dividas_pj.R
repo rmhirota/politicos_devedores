@@ -52,7 +52,8 @@ cruzamento_pj %>% arrange(ano_eleicao) %>%
   summarise(valor = sum(valor_consolidado),
             descricao_cargo = last(descricao_cargo),
             descricao_ue = last(descricao_ue),
-            empresa = list(unique(razao_social))) %>%
+            empresa = list(unique(razao_social)),
+            cnpj = list(unique(cnpj))) %>%
   arrange(desc(valor)) %>% head(10) %>% View()
 
 # Empresas devedoras com maior número de políticos
@@ -114,7 +115,7 @@ devedores_pj %>%
 cruzamento_pj %>%
   mutate(data_inscricao = dmy(data_inscricao)) %>%
   arrange(data_inscricao) %>%
-  select(nome_candidato, sigla_partido_novo, descricao_cargo, data_inscricao) %>%
+  select(nome_candidato, sigla_partido_novo, descricao_cargo, data_inscricao, nome_devedor) %>%
   head(12)
 
 

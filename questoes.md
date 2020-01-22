@@ -39,18 +39,18 @@ R$ 2.785.815.367,00 (representa 0,1% do total de dívidas PJ)
 
 6. Ranking de políticos com maior dívida  
   
-| Nome                                    | Partido | Dívida total    |     Cargo
-| ------------------------------          |:-------:| ---------------:|:-------------:|
-| GENIVAL BRITO DE CARVALHO               | PT      | R$ 724.949.556  | VEREADOR      |
-| MARCELO MARIO PORTO FILHO               |	PSD     | R$ 256.635.133  | PREFEITO      |
-| FERNANDA ENEIDA PESSOA CARACAS DE SOUZA | PSDB    | R$ 142.326.280  | DEP. ESTADUAL |
-| EDNILSON PINHEIRO BORGES                | PR      | R$ 114.037.188  | VEREADOR      |
-| ADEMIR PESTANA                          | PSDB    | R$  99.138.499  | VEREADOR      |
-| JADER FONTENELLE BARBALHO               | MDB     | R$  93.161.753  | SENADOR       |
-| HELDER ZAHLUTH BARBALHO                 | MDB     | R$  83.976.941  | GOVERNADOR    |
-| SAMUEL FARAH                            | PPS     | R$  71.842.073  | VEREADOR      |
-| GUILHERME ANTONIO MALUF                 | PSDB    | R$  63.530.382  | DEP. ESTADUAL |
-| AIRTON GARCIA FERREIRA                  | PSB     | R$  50.419.856  | PREFEITO      |
+| Nome                                    | Partido | Dívida total    |     Cargo     |     Empresa     |
+| ------------------------------          |:-------:| ---------------:|:-------------:| ----------------|
+| GENIVAL BRITO DE CARVALHO               | PT      | R$ 724.949.556  | VEREADOR      | AGUAS E ESGOTOS DO PIAUI SA |
+| MARCELO MARIO PORTO FILHO               |	PSD     | R$ 256.635.133  | PREFEITO      | METAIS DO SERIDO S/A-METASA e MINERACAO WOLFRAM LTDA |
+| FERNANDA ENEIDA PESSOA CARACAS DE SOUZA | PSDB    | R$ 142.326.280  | DEP. ESTADUAL | TOCANTINS AGRO AVICOLA SA |
+| EDNILSON PINHEIRO BORGES                | PR      | R$ 114.037.188  | VEREADOR      | COOPERATIVA DE ENERGIA E DESENVOLVIMENTO RURAL DO SERIDO |
+| ADEMIR PESTANA                          | PSDB    | R$  99.138.499  | VEREADOR      | SOCIEDADE PORTUGUESA DE BENEFICENCIA |
+| JADER FONTENELLE BARBALHO               | MDB     | R$  93.161.753  | SENADOR       | RBA REDE BRASIL AMAZONIA DE TELEVISAO LTDA, DIARIOS DO PARA LTDA, MOVIMENTO DEMOCRATICO BRASILEIRO - PARA - PA - ESTADUAL e AGROPECUARIA RIO BRANCO EIRELI |
+| HELDER ZAHLUTH BARBALHO                 | MDB     | R$  83.976.941  | GOVERNADOR    | DOL - INTERMEDIACAO DE NEGOCIOS, PORTAL DE INTERNET, GRAFICA, EDITORA, PUBLICIDADE, PROMOCOES E EVENTOS LTDA., RBA REDE BRASIL AMAZONIA DE TELEVISAO LTDA, DIARIOS DO PARA LTDA, CARAJAS FM LIMITADA, RADIO CLUBE DO PARA PRC5 LIMITADA e SNC SISTEMA NORTE DE COMUNICACAO LTDA |
+| SAMUEL FARAH                            | PPS     | R$  71.842.073  | VEREADOR      | COMED - CORPO MEDICO LTDA |
+| GUILHERME ANTONIO MALUF                 | PSDB    | R$  63.530.382  | DEP. ESTADUAL | GM PARTIC. E INVESTIMENTOS LTDA. e CENTRO DE DIAGNOSTICOS EM PET-CT E MEDICINA NUCLEAR LTDA |
+| AIRTON GARCIA FERREIRA                  | PSB     | R$  50.419.856  | PREFEITO      | MINERACAO VALE DO ARAGUAIA LTDA, CALVALE INDUSTRIA DE CALCARIO LTDA, AGUAS DO VALE HOTELARIA E TURISMO LTDA, INDUSCAL INDUSTRIA DE CALCARIO LTDA e AGUAS DO VALE EMPREENDIMENTOS TURISTICOS LTDA|
 
 
 7. Valor médio e mediano da dívida (por empresa)  
@@ -65,18 +65,18 @@ R$ 2.785.815.367,00 (representa 0,1% do total de dívidas PJ)
 
 9. Políticos que devem há mais tempo  
   
-| Nome                                    | Partido | Data de inscrição |     Cargo
-| ------------------------------          |:-------:| -----------------:|:-------------:|
-| MILTON PERPETUO MONTEIRO DE RESENDE     | PDT     | 1987-03-10        | VEREADOR      |
-| JOSE RAIMUNDO GUERRA ALMEIDA            |	PSD     | 1991-11-29        | VEREADOR      |
-| OTAVIANO DA CRUZ VIEIRA                 | PP      | 1992-10-21        | VEREADOR      |
-| MILTON PERPETUO MONTEIRO DE RESENDE     | PDT     | 1993-03-17        | VEREADOR      |
-| THIAGO LEITE FLORES PEREIRA             | MDB     | 1993-05-10        | PREFEITO      |
-| CID FERREIRA GOMES                      | PDT     | 1993-05-25        | SENADOR       |
-| MARIA SILVIA BARROS NEVES DE SOUZA      | PSDB    | 1994-12-21        | VEREADOR      |
-| SANDRA MARIA DA ESCOSSIA ROSADO         | PSB     | 1995-04-19        | VEREADOR      |
-| JOSE HAROLDO MARTINS FILHO              | PRP     | 1995-06-16        | VEREADOR      |
-| RENATO LUIZ ZANOL                       | MDB     | 1995-09-13        | VEREADOR      |
+| Nome                                    | Partido | Data de inscrição |     Cargo     | Nome da empresa     |
+| ------------------------------          |:-------:| -----------------:|:-------------:|---------------------|
+| MILTON PERPETUO MONTEIRO DE RESENDE     | PDT     | 1987-03-10        | VEREADOR      |DROGARIA SANTA AMALIA DE VASSOURAS LTDA|
+| JOSE RAIMUNDO GUERRA ALMEIDA            |	PSD     | 1991-11-29        | VEREADOR      |PONTO 96 BAR E RESTAURANTE LTDA|
+| OTAVIANO DA CRUZ VIEIRA                 | PP      | 1992-10-21        | VEREADOR      |CALDAS TERMAS CLUBE|
+| THIAGO LEITE FLORES PEREIRA             | MDB     | 1993-05-10        | PREFEITO      |CODARI COMPANHIA DE DESENVOLVIMENTO DE ARIQUEMES|
+| CID FERREIRA GOMES                      | PDT     | 1993-05-25        | SENADOR       |HIDROS COMUNICACOES LTDA|
+| MARIA SILVIA BARROS NEVES DE SOUZA      | PSDB    | 1994-12-21        | VEREADOR      |AGROFIBRA AGROINDUSTRIAL VALE DO IUIU LTDA|
+| SANDRA MARIA DA ESCOSSIA ROSADO         | PSB     | 1995-04-19        | VEREADOR      |RADIO RESISTENCIA DE MOSSORO LTDA|
+| JOSE HAROLDO MARTINS FILHO              | PRP     | 1995-06-16        | VEREADOR      |RADIO ITATAIA DE SANTA QUITERIA LTDA|
+| RENATO LUIZ ZANOL                       | MDB     | 1995-09-13        | VEREADOR      |IRMAOS ZANOL LTDA|
+| ODINIR ANTONIO GARBINATTO               | MDB     | 1995-09-15        | VEREADOR      |ALTO URUGUAI CEREAIS LTDA|
 
 *Obs.: Alguns políticos aparecem mais de uma vez no ranking de tempo de dívida, pois a visão da base é por documento, mas foi mantida apenas a dívida mais antiga na tabela.*
 
@@ -92,7 +92,7 @@ R$ 2.785.815.367,00 (representa 0,1% do total de dívidas PJ)
 R$ 2,48 trilhões (68,5% do total de dívida ativa)  
 
 
-3. Ranking das empresas com maior dívida  
+3. Ranking das empresas com maior dívida  (agrupamento por CNPJ e nome)
   
 | Nome                                    |   Dívida total    |  
 | ------------------------------          | -----------------:|

@@ -154,3 +154,13 @@ devedores_pj %>%
   head(10)
 
 
+# CSV para subir na matéria ----------
+
+
+
+cruzamento_pj %>% select(cpf_candidato, nome_candidato, sigla_partido,
+                         descricao_cargo, sigla_uf, descricao_ue,
+                         razao_social, cnpj,
+                         situacao_inscricao, valor_consolidado, data_inscricao)
+
+

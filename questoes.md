@@ -22,14 +22,14 @@ Top 10:
 | ------------------------------  |:-------:| ---------------:|:-------------:|
 | GENIVAL BRITO DE CARVALHO       | PT      |       27        | VEREADOR      |
 | DARCI JOSE LIMA DA ROSA         | PRM     |       11        | PREFEITO      |
-| ALTAIR BEZERRA DA SILVA JUNIOR  | PMDB    |       11        | PREFEITO      |
+| ALTAIR BEZERRA DA SILVA JUNIOR  | MDB     |       11        | PREFEITO      |
 | AIRTON GARCIA FERREIRA          | PSB     |        8        | PREFEITO      |
 | ELIDIO ARAUJO DE QUEIROZ        | PSD     |        7        | PREFEITO      |
 | HELDER ZAHLUTH BARBALHO         | MDB     |        6        | GOVERNADOR    |
 | DANIEL ALONSO                   | PSDB    |        6        | PREFEITO      |
 | LUIZ FURTADO REBELO FILHO       | PSDB    |        6        | DEP. ESTADUAL |
 | RONY FERRAZ QUEIROZ             | PHS     |        6        | VEREADOR      |
-| ANTONIO VIEIRA NETO             | PMDB    |        5        | VEREADOR      |
+| ANTONIO VIEIRA NETO             | MDB     |        5        | VEREADOR      |
 
 
 
@@ -54,23 +54,67 @@ R$ 2.785.815.367,00 (representa 0,1% do total de dívidas PJ)
 
 
 7. Valor médio e mediano da dívida (por empresa)  
-- Média geral: R\$ 945.420 / Mediana geral: R\$ 18.540
-- Média políticos:  R\$ 998.270 / Mediana políticos: R\$ 25.993
+- Média políticos:  R\$ 998.270 
+- Mediana políticos: R\$ 25.993
 
 
 8. Idade média da dívida  
+- Média políticos: 6,8 anos
 
 
 
+9. Políticos que devem há mais tempo  
+  
+| Nome                                    | Partido | Data de inscrição |     Cargo
+| ------------------------------          |:-------:| -----------------:|:-------------:|
+| MILTON PERPETUO MONTEIRO DE RESENDE     | PDT     | 1987-03-10        | VEREADOR      |
+| JOSE RAIMUNDO GUERRA ALMEIDA            |	PSD     | 1991-11-29        | VEREADOR      |
+| OTAVIANO DA CRUZ VIEIRA                 | PP      | 1992-10-21        | VEREADOR      |
+| MILTON PERPETUO MONTEIRO DE RESENDE     | PDT     | 1993-03-17        | VEREADOR      |
+| THIAGO LEITE FLORES PEREIRA             | MDB     | 1993-05-10        | PREFEITO      |
+| CID FERREIRA GOMES                      | PDT     | 1993-05-25        | SENADOR       |
+| MARIA SILVIA BARROS NEVES DE SOUZA      | PSDB    | 1994-12-21        | VEREADOR      |
+| SANDRA MARIA DA ESCOSSIA ROSADO         | PSB     | 1995-04-19        | VEREADOR      |
+| JOSE HAROLDO MARTINS FILHO              | PRP     | 1995-06-16        | VEREADOR      |
+| RENATO LUIZ ZANOL                       | MDB     | 1995-09-13        | VEREADOR      |
 
-9. Políticos que devem há mais tempo
+*Obs.: Alguns políticos aparecem mais de uma vez no ranking de tempo de dívida, pois a visão da base é por documento, mas foi mantida apenas a dívida mais antiga na tabela.*
+
+
 
 
 ### Base em geral
 
-1. Quantas empresas estão inscritas na dívida ativa da união?
-2. Quanto, em R$, elas devem no total (% da dívida inteira, considerando PF)
-3. Ranking das empresas com maior dívida
-7. Valor médio e mediano da dívida
-8. Idade média da dívida
-9. Políticos que devem há mais tempo
+1. Quantas empresas estão inscritas na dívida ativa da união?  
+2.627.524 empresas  
+
+2. Quanto, em R$, elas devem no total (% da dívida inteira, considerando PF)  
+R$ 2,48 trilhões (68,5% do total de dívida ativa)  
+
+
+3. Ranking das empresas com maior dívida  
+  
+| Nome                                    |   Dívida total    |  
+| ------------------------------          | -----------------:|
+| VALE S.A.                               | R$ 40.036.143.086 |
+| PETROLEO BRASILEIRO S A PETROBRAS       |	R$ 39.939.587.884 |
+| CARITAL BRASIL LTDA                     | R$ 31.427.897.150 | 
+| PADMA INDUSTRIA DE ALIMENTOS SA         | R$ 29.980.475.364 |
+| LAEP INVESTMENTS LTD                    | R$ 28.102.262.083 |
+| COMPANHIA DE ALIMENTOS GLORIA           | R$ 27.636.358.859 | 
+| LACTEOS DO BRASIL SA.                   | R$ 25.458.776.703 | 
+| ZIRCONIA PARTICIPACOES LTDA             | R$ 18.737.605.160 |
+| INDUSTRIAS DE PAPEL R RAMENZONI SA      | R$ 11.041.715.004 |
+| COPEL COMERCIAL LIMITADA                | R$ 10.226.936.647 |
+
+
+7. Valor médio e mediano da dívida  
+- Média geral: R\$ 945.420 
+- Mediana geral: R\$ 18.540
+
+8. Idade média da dívida  
+- Média geral: 7,9 anos  
+
+9. Empresas que devem há mais tempo  
+  
+

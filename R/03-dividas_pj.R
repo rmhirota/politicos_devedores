@@ -2,6 +2,7 @@ library(janitor)
 library(dplyr)
 library(stringr)
 library(RPostgreSQL)
+library(lubridate)
 
 
 politicos_total <- readRDS("data/politicos_total.rds")
@@ -33,7 +34,7 @@ cruzamento_pj$cpf_candidato %>% n_distinct()
 
 # Políticos com mais de uma empresa inscrita na dívida ativa
 cruzamento_pj %>%
-  group_by(cpf_candidato, nome_candidato, sigla_partido, descricao_cargo) %>%
+  group_by(cpf_candidato, nome_candidato, sigla_partido_novo, descricao_cargo) %>%
   summarise(n_empresas = n_distinct(cnpj_str)) %>%
   filter(n_empresas > 1) %>%
   arrange(desc(n_empresas))
@@ -90,6 +91,34 @@ cruzamento_pj %>%
   summarise(valor_agregado = sum(valor_consolidado)) %>%
   pull(valor_agregado) %>% median()
 
+
+
+
+
+# Tempo de dívida ---------------------------------------------------------
+# Políticos
+cruzamento_pj %>%
+  mutate(data_inscricao = dmy(data_inscricao),
+         duracao_dias = today() - data_inscricao,
+         duracao_anos = duracao_dias/365.25) %>%
+  pull(duracao_anos) %>% mean()
+
+# Geral
+devedores_pj %>%
+  mutate(data_inscricao = dmy(data_inscricao),
+         duracao_dias = today() - data_inscricao,
+         duracao_anos = duracao_dias/365.25) %>%
+  pull(duracao_anos) %>% mean()
+
+# Políticos que devem há mais tempo (visão doc - dívida)
+cruzamento_pj %>%
+  mutate(data_inscricao = dmy(data_inscricao)) %>%
+  arrange(data_inscricao) %>%
+  select(nome_candidato, sigla_partido_novo, descricao_cargo, data_inscricao) %>%
+  head(12)
+
+
+
 # políticos endividados duplamente ----------------------------------------
 
 pol_dev_total <- readRDS("data/cruzamento_pf.rds")
@@ -107,5 +136,20 @@ pol_dev_total %>% mutate(cpf_candidato = as.numeric(cpf_candidato)) %>%
 pol_dev_total %>% select(cpf_candidato) %>% glimpse()
 cruzamento_pj %>% select(cpf_candidato) %>% glimpse()
 
+
+
+# Base geral --------------------------------------------------------------
+
+devedores_pj %>%
+  group_by(cpf_cnpj, nome_devedor) %>%
+  summarise(valor_agregado = sum(valor_consolidado)) %>%
+  arrange(desc(valor_agregado)) %>% head(10)
+
+# Empresas que devem há mais tempo
+devedores_pj %>%
+  mutate(data_inscricao = dmy(data_inscricao)) %>%
+  arrange(data_inscricao) %>%
+  select(cpf_cnpj, nome_devedor, data_inscricao) %>%
+  head(10)
 
 

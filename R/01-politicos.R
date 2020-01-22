@@ -11,11 +11,13 @@ governador_2018 <- get_candidates(year = 2018, position = "Governador", only_ele
 presid_2018 <- get_candidates(year = 2018, position = "Presidente", only_elected = TRUE) %>% clean_names()
 presid_2018$cpf_candidato <- as.character(presid_2018$cpf_candidato)
 politicos_2018 <- bind_rows(presid_2018, depfederal_2018, depestadual_2018, senador_2018, governador_2018)
+rm(depfederal_2018, depestadual_2018, senador_2018, governador_2018, presid_2018)
 
 # Coleta dados de políticos eleitos em 2016
 vereador_2016 <- get_candidates(year = 2016, position = "Vereador", only_elected = TRUE) %>% clean_names()
 prefeito_2016 <- get_candidates(year = 2016, position = "Prefeito", only_elected = TRUE) %>% clean_names()
 politicos_2016 <- bind_rows(vereador_2016, prefeito_2016) %>% clean_names()
+rm(vereador_2016, prefeito_2016)
 
 # Coleta dados de políticos eleitos em 2018
 depfederal_2014 <- get_candidates(year = 2014, position = "Deputado Federal", only_elected = TRUE) %>% clean_names()
@@ -25,9 +27,10 @@ governador_2014 <- get_candidates(year = 2014, position = "Governador", only_ele
 presid_2014 <- get_candidates(year = 2014, position = "Presidente", only_elected = TRUE) %>% clean_names()
 presid_2014$cpf_candidato <- as.character(presid_2014$cpf_candidato)
 politicos_2014 <- bind_rows(presid_2014, depfederal_2014, depestadual_2014, senador_2014, governador_2014)
+rm(depfederal_2014, depestadual_2014, senador_2014, governador_2014, presid_2014)
 
 
-politicos_2018 <- politicos_2018 %>% mutate(subset_cpf = as.integer(str_sub(cpf_candidato, 4,9)))
+politicos_2018 <- politicos_2018 %>% mutate(subset_cpf = as.integer(str_sub(cpf_candidato, 4,9))) %>% glimpse()
 politicos_2016 <- politicos_2016 %>% mutate(subset_cpf = as.integer(str_sub(cpf_candidato, 4,9)))
 politicos_2014 <- politicos_2014 %>% mutate(subset_cpf = as.integer(str_sub(cpf_candidato, 4,9)))
 
@@ -47,6 +50,6 @@ politicos_total <- politicos_total %>%
             sigla_partido == "PSDC", "DC", sigla_partido))))))
 
 
-politicos_total %>% readr::write_csv("data/politicos_total.csv")
+# politicos_total %>% readr::write_csv("data/politicos_total.csv")
 politicos_total %>% saveRDS("data/politicos_total.rds")
 

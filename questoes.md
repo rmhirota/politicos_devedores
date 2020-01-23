@@ -116,5 +116,18 @@ R$ 2,48 trilhões (68,5% do total de dívida ativa)
 - Média geral: 7,9 anos  
 
 9. Empresas que devem há mais tempo  
+
+| CNPJ            | Nome                              |  Data de inscrição  |  
+| ----------------|-----------------------------------|--------------------:|
+| 10613727000106  | USINA 13 DE MAIO SA               | 1967-01-07          |
+| 54730700000160  | SEM INFORMACAO                    | 1967-03-02          |
+| 90724311000196  | LITOGRAFIA SERRANA SA MASSA FALIDA| 1969-01-08          |
+| 94864063000130  | COMPANHIA UNIAO FABRIL            | 1969-01-27          |
+| 88619572000102  | TRANSPORTES AURELIO LTDA          | 1969-09-09          |
+| 61091914000108  | SEM INFORMACAO                    | 1969-12-08          |
+| 61091914000108  | SEM INFORMACAO                    | 1969-12-08          |
+| 09969528000148  | USINA CRAUATA SA                  | 1970-01-02          |
+| 33088550000163  | SEM INFORMACAO                    | 1970-10-06          |
+| 71458384000210  | SEM INFORMACAO                    | 1970-10-06          |
   
 

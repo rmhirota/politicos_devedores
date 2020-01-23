@@ -158,9 +158,15 @@ devedores_pj %>%
 
 
 
-cruzamento_pj %>% select(cpf_candidato, nome_candidato, sigla_partido,
-                         descricao_cargo, sigla_uf, descricao_ue,
-                         razao_social, cnpj,
-                         situacao_inscricao, valor_consolidado, data_inscricao)
+cruzamento_pj %>%
+  mutate(qualificacao_do_responsavel = as.numeric(qualificacao_do_responsavel)) %>%
+  left_join(depara_qualificacao,
+                            by = c("qualificacao_do_responsavel" = "codigo")) %>%
+  select(cpf_candidato, nome_candidato, sigla_partido,
+         descricao_cargo, sigla_uf, descricao_ue,
+         razao_social, cnpj, descricao,
+         situacao_inscricao, valor_consolidado, data_inscricao) %>%
+  readr::write_csv("cruzamento_pj_tabela.csv")
+
 
 

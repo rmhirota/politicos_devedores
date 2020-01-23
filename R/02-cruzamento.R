@@ -28,7 +28,8 @@ db <- dbConnect(PostgreSQL(),
 
 # lista as tabelas do banco de dados
 dbListTables(db)
-dbGetQuery(db, "select * from politicos_total limit 10") %>% glimpse()
+
+depara_qualificacao <- dbGetQuery(db, "select * from codigos_qualificacao")
 
 politicos_socios <- (dbGetQuery(db,
                                 "select *
@@ -73,3 +74,4 @@ cruzamento_pj <- cruzamento_pj %>% mutate(sigla_partido_novo = ifelse(
 
 cruzamento_pj %>% saveRDS("data/cruzamento_pj.rds")
 politicos_socios_red %>% saveRDS("data/politicos_socios_red.rds")
+depara_qualificacao %>% saveRDS("data/depara_qualificacao.rds")

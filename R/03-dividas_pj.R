@@ -52,6 +52,7 @@ cruzamento_pj %>% arrange(ano_eleicao) %>%
   summarise(valor = sum(valor_consolidado),
             descricao_cargo = last(descricao_cargo),
             descricao_ue = last(descricao_ue),
+            sigla_uf = last(sigla_uf),
             empresa = list(unique(razao_social)),
             cnpj = list(unique(cnpj))) %>%
   arrange(desc(valor)) %>% head(10) %>% View()

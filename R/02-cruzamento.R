@@ -19,12 +19,7 @@ cruzamento_pf %>% saveRDS("data/cruzamento_pf.rds")
 # Cruzamento PJ -----------------------------------------------------------
 
 devedores_pj <- readRDS("data/devedores_pj.rds")
-
-db <- dbConnect(PostgreSQL(),
-                user = "rows_user",
-                password = "oTSZ5ND4vTSxtdrkSyUz",
-                dbname = "postgres",
-                host = "vortex-metabase.ceojcho0vrjr.us-east-2.rds.amazonaws.com")
+source("R/conexao.R")
 
 # lista as tabelas do banco de dados
 dbListTables(db)
